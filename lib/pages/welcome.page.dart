@@ -23,7 +23,9 @@ class WelcomePage extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
-                SizedBox(height: 75.0,),
+                SizedBox(
+                  height: 50.0,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -36,12 +38,34 @@ class WelcomePage extends StatelessWidget {
                         'MIND',
                         style: TextStyle(color: Colors.white, fontSize: 30.0),
                       ),
-                      Text('BODY', 
-                        style: TextStyle(color: Colors.white, fontSize: 30.0, fontWeight: FontWeight.bold),
+                      Text(
+                        'BODY',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold),
                       ),
-                      Text('\u00a9', 
+                      Text(
+                        '\u00a9',
                         style: TextStyle(color: Colors.white, fontSize: 10.0),
                       ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 30.0,
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 70),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text('Welcome to MINDBODY!',
+                        style: TextStyle(fontSize: 23.0),
+                      ),
+                      Text('Sign up and start exploring.',
+                        style: TextStyle(fontSize: 14.0),
+                      )
                     ],
                   ),
                 )
