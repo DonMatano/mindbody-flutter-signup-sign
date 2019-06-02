@@ -21,55 +21,86 @@ class WelcomePage extends StatelessWidget {
                           Colors.deepOrangeAccent.withOpacity(0.8),
                           BlendMode.srcOver))),
             ),
-            Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 50.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    key: Key('mindBodyTitle'),
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.alphabetic,
-                    children: <Widget>[
-                      Text(
-                        'MIND',
-                        style: TextStyle(color: Colors.white, fontSize: 30.0),
-                      ),
-                      Text(
-                        'BODY',
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      key: Key('mindBodyTitle'),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: <Widget>[
+                        Text(
+                          'MIND',
+                          style: TextStyle(color: Colors.white, fontSize: 30.0),
+                        ),
+                        Text(
+                          'BODY',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '\u00a9',
+                          style: TextStyle(color: Colors.white, fontSize: 10.0),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 70),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          'Welcome to MINDBODY!',
+                          style: TextStyle(fontSize: 23.0),
+                        ),
+                        Text(
+                          'Sign up and start exploring.',
+                          style: TextStyle(fontSize: 14.0),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: FlatButton(
+                      child: Text(
+                        'SIGN UP',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold),
+                            fontSize: 12, letterSpacing: 1, wordSpacing: 2),
                       ),
-                      Text(
-                        '\u00a9',
-                        style: TextStyle(color: Colors.white, fontSize: 10.0),
-                      ),
-                    ],
+                      color: Colors.white,
+                      padding: EdgeInsets.all(12.0),
+                      textColor: Colors.orange.shade900,
+                      onPressed: () {},
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 70),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Text('Welcome to MINDBODY!',
-                        style: TextStyle(fontSize: 23.0),
-                      ),
-                      Text('Sign up and start exploring.',
-                        style: TextStyle(fontSize: 14.0),
-                      )
-                    ],
-                  ),
-                )
-              ],
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlineButton(
+                      child: Text('I ALREADY HAVE AN ACCOUNT, LOGIN',
+                          style: TextStyle(
+                              fontSize: 12, letterSpacing: 1, wordSpacing: 2)),
+                      textColor: Colors.white,
+                      padding: EdgeInsets.all(12.0),
+                      borderSide: BorderSide(color: Colors.white),
+                      onPressed: () {},
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
