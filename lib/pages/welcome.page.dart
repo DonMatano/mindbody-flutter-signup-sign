@@ -2,25 +2,21 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mindblown_sign_in_up_flutter/components/background.component.dart';
+
+import 'login.page.dart';
 
 class WelcomePage extends StatelessWidget {
+  static const routeName = '/';
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      key: Key('Welcome Page'),
       body: SafeArea(
         child: Stack(
           children: <Widget>[
-            // Image.asset('images/yoga.jpg', fit: BoxFit.cover, height: double.infinity,),
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('images/yoga.jpg'),
-                      fit: BoxFit.cover,
-                      colorFilter: ColorFilter.mode(
-                          Colors.deepOrangeAccent.withOpacity(0.8),
-                          BlendMode.srcOver))),
-            ),
+            BackgroundImage('images/yoga.jpg'),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Column(
@@ -76,6 +72,7 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: FlatButton(
+                      key: Key('Sign up button'),
                       child: Text(
                         'SIGN UP',
                         style: TextStyle(
@@ -90,14 +87,40 @@ class WelcomePage extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlineButton(
+                      key: Key('Login button'),
                       child: Text('I ALREADY HAVE AN ACCOUNT, LOGIN',
                           style: TextStyle(
                               fontSize: 12, letterSpacing: 1, wordSpacing: 2)),
                       textColor: Colors.white,
                       padding: EdgeInsets.all(12.0),
                       borderSide: BorderSide(color: Colors.white),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, LoginPage.routeName);
+                      },
                     ),
+                  ),
+                  FlatButton(
+                    key: Key('Continue as guest button'),
+                    child: Text(
+                      'Continue as a guest',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.underline),
+                    ),
+                    textColor: Colors.white,
+                    onPressed: () {},
+                  ),
+                  FlatButton(
+                    key: Key('Terms and privacy button'),
+                    child: Text(
+                      'Terms and privacy policy',
+                      style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.underline),
+                    ),
+                    textColor: Colors.white,
+                    onPressed: () {},
                   )
                 ],
               ),
