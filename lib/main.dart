@@ -24,6 +24,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Lato',
         primarySwatch: Colors.deepOrange,
+        buttonTheme: ButtonThemeData(
+          textTheme: ButtonTextTheme.accent
+        ),
         textTheme: TextTheme(
           headline: TextStyle(
             color: Colors.white,
@@ -31,11 +34,16 @@ class MyApp extends StatelessWidget {
           body1: TextStyle(color: Colors.white),
         ),
         iconTheme: IconThemeData(color: Colors.white),
+        hintColor: Colors.white,
+        accentColor: Colors.white,
         inputDecorationTheme: InputDecorationTheme(
+          border: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
           labelStyle: TextStyle(color: Colors.white, fontSize: 12),
-          contentPadding: const EdgeInsets.all(8),
-          
-        )
+          hintStyle: TextStyle(color: Colors.white),
+          focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+          prefixStyle: TextStyle(color: Colors.white),
+          contentPadding: const EdgeInsets.all(8), 
+        ),
       ),
     );
   }
