@@ -6,9 +6,9 @@ My main aim is to learn Flutter using these challenge.
 
 UI inspiration was from [Miles Cartwright](https://dribbble.com/mcartw20) Dribble [Login UI](https://dribbble.com/shots/6478687-MINDBODY-app-login)
 
-![Screenshot 1](images/screenshots/1.png)
 
-![Screenshot 2](images/screenshots/2.png)
+<img src="images/screenshots/1.png" width="300" height="500"/>
+<img src="images/screenshots/2.png" width="300" height="500"/>
 
 ## Installing process
 
