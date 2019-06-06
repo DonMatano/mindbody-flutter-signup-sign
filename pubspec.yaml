@@ -64,8 +64,14 @@ flutter:
           style: italic
         - asset: fonts/Lato-Bold.ttf
           weight: 700
-        # - asset: fonts/Lato-Light.tff
-        #   weight: 300
+        - asset: fonts/Lato-Light.ttf
+          weight: 300
+    - family: Facebook
+      fonts:
+        - asset: fonts/Facebook.icon.ttf
+    - family: Google
+      fonts:
+        - asset: fonts/Google.icon.ttf
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
